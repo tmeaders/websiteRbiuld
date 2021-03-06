@@ -1,24 +1,11 @@
 @import 'typography';
 @import 'icons';
 @import 'mixins';
+@import 'variables';
+@import 'classes';
 
-$sm-break: 48em;
-// colors
-$dark-gray: #727272;
-$med-gray: #b4b3b5;
-$light-gray: #eaeaea;
-$body-font: #020202;
-$link-blue: #0076b6; //why do we have both of these blues?
-$byui-blue: #056cb6;
 
-// Utility classes
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 
 img {
   max-width: 100%;

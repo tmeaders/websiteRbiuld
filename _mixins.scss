@@ -1,6 +1,7 @@
 $S: 20em;
 $M: 32em;
 $L: 64em;
+$sm-break: 48em;
 
 @mixin MQ($size) {
     @if $size==S {
