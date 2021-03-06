@@ -5,10 +5,22 @@
 @import 'classes';
 
 
-
+main{
+  width: $sm-width;
+  
+}
 
 img {
-  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 0;
+  width: 100%;
+  //for testing
+  border: 1px solid black;
+
+
 }
 
 .sr-only {
@@ -69,9 +81,10 @@ a:link {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 2em 1em 2em 1em;
+  margin: 2em 1em 2em .05em;
   text-align: center;
   padding: 0 .75em 1em .75em;
+  width: 310px;
 
   & h2 {
     font-weight: 100;
@@ -97,7 +110,7 @@ a:link {
   width: 100%
 }
 
-.resource-link{
+.resource-link {
   display: block;
   border: 1px solid black;
 }
@@ -107,7 +120,6 @@ a:link {
   padding: 0;
 }
 
-.component-spacing{
+.component-spacing {
   margin-bottom: 36px !important;
 }
-
