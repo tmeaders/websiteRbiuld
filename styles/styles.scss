@@ -65,7 +65,7 @@ a:link {
   margin: 2em 1em 2em .05em;
   text-align: center;
   padding: 0 .75em 1em .75em;
-  width: 310px;
+  width: 300px;
 
   & h2 {
     font-weight: 100;
@@ -83,16 +83,48 @@ a:link {
   }
 }
 
+html,
+body,
 main {
-  width: $sm-width;
+  max-width: $S;
+}
+
+.sm-display {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  //test coloring
+  background-color: blue;
+
+  .icon-angle-right::before {
+
+    //test coloring
+    background-color: orangered;
+  }
+
+  .home-ad-caption {
+    grid-column: 1;
+    border: 1px solid $med-gray;
+    font-family: $byu-font;
+    color: $link-blue;
+    text-align: left;
+    padding: 1vw;
+
+    .float-right {
+      grid-column: 2;
+      justify-content: right;
+      margin-right: -3vw;
+
+      font-size: 15px;
+    }
+
+
+  }
 
 }
 
 img {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  flex: 1;
+  grid-template-columns: minmax-content(2fr);
   margin-left: 0;
   width: 100%;
 
@@ -100,32 +132,26 @@ img {
 
 
 
-.home-ad-caption {
-  border: 1px solid $med-gray;
-  font-family: $byu-font;
-  color: $link-blue;
-  text-align: left;
-  padding: 3vw;
 
-  .float-right {
-    margin: 0;
-    padding-left: 45vw;
-    font-size: 15px;
-  }
-
-}
 
 .audience-button {
-  display: block;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  grid-column: 1, 80%;
   padding: 10px 18px;
   font-weight: 700;
-  font-size: 16px bold;
+  font-size: 14px;
   text-align: left;
   width: 100%;
+  //test coloring
+  background-color: yellow;
 
   .float-right {
+    grid-column: 2;
+    grid-row: 1;
     margin: 0;
-    padding-left: 33vw;
+    padding-left: 0;
   }
 }
 
@@ -151,8 +177,11 @@ img {
 
 }
 
-.float-right {
-  margin: 8vh 8vh 5vh 56vw;
+.btn.btn-blue.float-right {
+  margin-top: 4vh;
+  margin-left: 37.5vw;
+  margin-bottom: 3vh;
+  font-family: $byu-font;
 }
 
 .hidden-sm {
@@ -162,6 +191,7 @@ img {
 .article-date {
   border-top: 1px solid $med-gray;
 }
+
 
 .bg-gray {
   background-color: $dark-gray;
@@ -173,6 +203,17 @@ img {
   margin-bottom: -1.95vh;
 }
 
+.bg-blue {
+  background-color: $link-blue;
+  color: $acc-white;
+  height: 5vh;
+  font-family: $byu-font;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 1vh;
+  padding-left: 6vw;
+}
+
 .resource-link {
   display: block;
   font-family: $byu-font;
@@ -181,14 +222,67 @@ img {
   color: $link-blue;
   text-align: left;
   padding-left: 6vw;
-  .float-right {
-    margin-left: 25vw;
-    //padding-left: 25vw;
-  }
-  
+  //test coloring
+  background-color: mediumpurple;
+
 }
 
 
+.highlights-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  //testing coloring
+  background-color: green;
+ 
+  .col-3a {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 6vw;
+    //test coloring
+    background-color: hotpink;
+  }
+  .col-3b{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .col-8a {
+    grid-column: 3;
+    grid-row: 1;
+    //test coloring
+    background-color: lawngreen;
+  }
+
+}
+
+.article {
+  //test coloring
+  background-color: salmon;
+}
+
+.col-12 h4{
+  font-family: $byu-font;
+  margin-left: 6vw;
+  font-size: 15px;
+  color: $link-blue;
+  font-weight: 500;
+}
+.article-date{
+  font-family: $byu-font;
+  font-size: 11px;
+  margin-left: 6vw;
+  border-top: 1px solid $med-gray;
+  padding-top: 2vh;
+}
+
+.article-abstract{
+  margin-bottom: 4vh;
+  margin-left: 6vw;
+  font-family: $byu-font;
+  font-size: 15px;
+  color: $body-font;
+  font-weight: 300;
+}
 /* -- footer -- */
 footer {
   background-color: $link-blue;
