@@ -1091,7 +1091,7 @@ a:link {
   margin: 2em 1em 2em .05em;
   text-align: center;
   padding: 0 .75em 1em .75em;
-  width: 300px;
+  width: 100%;
 }
 
 .university-info-banner h2 {
@@ -1106,26 +1106,7 @@ a:link {
   color: #ffffff;
   font-weight: 700;
   padding: .5em 1.5em .5em 1.5em;
-}
-
-html,
-body,
-main {
-  max-width: 20em;
-}
-
-.sm-display {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr;
-      grid-template-columns: 2fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  background-color: blue;
-}
-
-.sm-display .icon-angle-right::before {
-  background-color: orangered;
+  width: 100%;
 }
 
 .home-ad-caption {
@@ -1316,5 +1297,56 @@ footer {
 
 footer .smftr {
   color: #ffffff;
+}
+
+/*- lg media-query -*/
+@media screen and (min-width: 40em) {
+  html,
+  body,
+  main {
+    max-width: 100%;
+  }
+  header {
+    max-width: 100%;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5em;
+    -ms-grid-columns: 5fr 3fr;
+        grid-template-columns: 5fr 3fr;
+    padding: 5em;
+  }
+  img {
+    width: 100%;
+  }
+  .row img.img-responsive {
+    width: 12vw;
+    max-width: 40vw;
+  }
+  article .row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+  }
+  .three-img-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+  }
+  .university-info-banner {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .hidden-sm {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
