@@ -101,38 +101,35 @@ main {
     //test coloring
     background-color: orangered;
   }
-
+}
   .home-ad-caption {
-    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border: 1px solid $med-gray;
     font-family: $byu-font;
     color: $link-blue;
     text-align: left;
     padding: 1vw;
-
+  }
     .float-right {
-      grid-column: 2;
-      justify-content: right;
-      margin-right: -3vw;
-
+     // justify-content: right; float: right;
+    text-align: right; 
       font-size: 15px;
     }
+  
 
 
-  }
-
+.home-ad-fig{
+  width: 100%;
+  margin: 0;
+  border: 1px solid $med-gray;
 }
 
 img {
   grid-template-columns: minmax-content(2fr);
   margin-left: 0;
   width: 100%;
-
 }
-
-
-
-
 
 .audience-button {
   display: grid;
@@ -145,7 +142,7 @@ img {
   text-align: left;
   width: 100%;
   //test coloring
-  background-color: yellow;
+  //background-color: yellow;
 
   .float-right {
     grid-column: 2;
@@ -163,6 +160,10 @@ img {
 .component-spacing {
   margin-bottom: 36px !important;
 }
+.newsroom-link {
+	display: grid;
+	justify-items: right;
+}
 
 .btn-blue {
   background-color: $link-blue;
@@ -179,7 +180,7 @@ img {
 
 .btn.btn-blue.float-right {
   margin-top: 4vh;
-  margin-left: 37.5vw;
+  margin-left: 52vw;
   margin-bottom: 3vh;
   font-family: $byu-font;
 }
@@ -214,60 +215,45 @@ img {
   padding-left: 6vw;
 }
 
+
+
 .resource-link {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  padding: .4rem .7rem;
   font-family: $byu-font;
   font-weight: 300;
   border: 1px solid $med-gray;
   color: $link-blue;
   text-align: left;
-  padding-left: 6vw;
-  //test coloring
-  background-color: mediumpurple;
-
 }
 
 
-.highlights-list {
+.highlights-link {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 1fr;
-  //testing coloring
-  background-color: green;
- 
-  .col-3a {
-    grid-column: 1;
-    grid-row: 1;
-    margin-left: 6vw;
-    //test coloring
-    background-color: hotpink;
-  }
-  .col-3b{
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .col-8a {
-    grid-column: 3;
-    grid-row: 1;
-    //test coloring
-    background-color: lawngreen;
+  grid-template-columns: auto auto 2fr;
+  grid-gap: 1em;
+  align-items: center;
+  padding: 0.5em;
+  font-family: $byu-font;
+  color: $body-font;
+  .col-3{
+    font-weight: 900; 
+
   }
 
 }
 
-.article {
-  //test coloring
-  background-color: salmon;
-}
 
-.col-12 h4{
+.col-12 h4 {
   font-family: $byu-font;
   margin-left: 6vw;
   font-size: 15px;
   color: $link-blue;
   font-weight: 500;
 }
-.article-date{
+
+.article-date {
   font-family: $byu-font;
   font-size: 11px;
   margin-left: 6vw;
@@ -275,7 +261,7 @@ img {
   padding-top: 2vh;
 }
 
-.article-abstract{
+.article-abstract {
   margin-bottom: 4vh;
   margin-left: 6vw;
   font-family: $byu-font;
@@ -283,12 +269,14 @@ img {
   color: $body-font;
   font-weight: 300;
 }
+
 /* -- footer -- */
 footer {
   background-color: $link-blue;
   height: 6vh;
   text-align: center;
   padding: 1em;
+  font-family: $byu-font;
 
   .smftr {
     color: $acc-white;
